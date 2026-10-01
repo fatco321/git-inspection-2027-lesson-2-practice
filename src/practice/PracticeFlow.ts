@@ -178,7 +178,7 @@ export class PracticeFlow {
       [
         { text: "Прочитать предписание", action: () => this.prescription() },
         { text: "Создать обращение — отчёт", action: () => this.report() },
-        { text: "Ходатайство о продлении", action: () => this.extension() },
+        { text: "Ходатайство о продлении срока исполнения предписания", action: () => this.extension() },
         { text: "Дождаться следующего дня", action: () => this.wait() },
         this.close,
       ],
@@ -527,7 +527,7 @@ export class PracticeFlow {
     }
     const description =
       job.status === "working"
-        ? `Исполнитель работает. До завершения: ${formatDays(job.finish - this.state.day)} (день ${job.finish}). Можно заняться другими пунктами или подождать.`
+        ? `Исполнитель работает. До завершения: ${formatDays(job.finish - this.state.day)}. Работа завершится на ${job.finish}-й день. Можно заняться другими пунктами или подождать.`
         : job.status === "pending"
           ? `Оценка исполнителя: ${formatDays(task.days)} · ${task.cost.toLocaleString("ru")} ₽. Требуются план и бюджет. Запуск — 1 день.`
           : job.status === "accepted"
