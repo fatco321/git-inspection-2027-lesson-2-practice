@@ -1,0 +1,12 @@
+{
+  "source": "https://kenney.nl/assets/furniture-kit",
+  "asset": "Furniture Kit 2.0 / doorway",
+  "license": "CC0-1.0",
+  "attributionRequired": false,
+  "sourceSha256": "08983e299822140d580eb55d4b4e4e4552c37bb6e88571e41d2b7b5d2eef987e",
+  "modifications": "Original geometry; planar UVs, embedded procedural oak grain (256x256); metallic hardware. Texture authored for this project.",
+  "files": {
+    "doorway.glb": "9c33c588d11ad0fcad185ff86006b727b1b66d2c50c83dcd2d298166ea7d8d05",
+    "License.txt": "bc0de1a0742cb490f9ed4bae0bd284286ebb27e23149b9917c7d8c0d590b8b29"
+  }
+}

@@ -1,0 +1,60 @@
+.day-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  background: rgba(5, 12, 29, calc(var(--night, 0) * 0.22));
+  cursor: wait;
+}
+.day-transition-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  min-width: 220px;
+  padding: 26px 36px;
+  border: 1px solid #accdc16b;
+  border-radius: 16px;
+  background: #162b3de8;
+  box-shadow: 0 20px 80px #0005;
+  color: #eee9d8;
+  text-align: center;
+}
+.day-transition-card strong {
+  font-size: 28px;
+  font-weight: 600;
+}
+.day-transition-card span {
+  font-size: 15px;
+  color: #c4d9d9;
+}
+.day-transition-orb {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #e5bd81;
+  box-shadow: 0 0 30px #e5bd8130;
+  transition:
+    background 0.35s,
+    box-shadow 0.35s;
+}
+.day-transition[data-phase="night"] .day-transition-orb {
+  background: #c2d4e8;
+  box-shadow: none;
+  /* Transparent cutout keeps the crescent crisp against the translucent card. */
+  mask-image: radial-gradient(
+    circle at 65% 35%,
+    transparent 17px,
+    #000 17.5px
+  );
+}
+.day-transition[data-phase="morning"] .day-transition-orb {
+  background: #f3d89a;
+  box-shadow: 0 0 38px #f3d89a66;
+}
+@media (prefers-reduced-motion: reduce) {
+  .day-transition-orb {
+    transition: none;
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "sourceProject": "/Users/vladimir/Documents/ChatGPT/Игра Курс месяца — Урок 2 — Пролог",
+  "license": "Models: CC0-1.0; portraits: previously generated for this course",
+  "files": [
+    {
+      "path": "public/images/characters/andrey-cartoon-v2.png",
+      "sha256": "6afcb84ad111c0eae713f078e9208d3600c1defb74568a19183967c4d18e821f"
+    },
+    {
+      "path": "public/images/characters/specialist-cartoon-v2.png",
+      "sha256": "133012b0a9763ed112c60cb40f2c164ebe69a00897c5cab4bd4060abfb034a3c"
+    },
+    {
+      "path": "public/models/quaternius/worker.gltf",
+      "sha256": "e49f8ec0f8a7de72dd26b1c01e6413c9a87a9116eeee21f9364ccd36bc286335"
+    },
+    {
+      "path": "public/models/quaternius/worker.SOURCE.json",
+      "sha256": "f8d7f68c69957c111a5efbb41e46f3490b5312bb6695feeb24ca06ff2718d279"
+    },
+    {
+      "path": "public/models/office/andrey.glb",
+      "sha256": "39a87fe361abf82e54a8d9d99375a082bd4075c22ab83091d3bfb1fe902607f5"
+    },
+    {
+      "path": "public/models/office/andrey.SOURCE.json",
+      "sha256": "166db4ef44203e517886e8fce05f4d8059b33230922836463e312c82a80fef66"
+    },
+    {
+      "path": "public/models/quaternius/suit.gltf",
+      "source": "/Users/vladimir/Documents/ChatGPT/Игра Курс месяца/public/models/quaternius/suit.gltf",
+      "sha256": "6c89fbb31b96c1a63ad94e3dee0942bd7b34bc789a5d39fd6a6a1738a9214fb3"
+    },
+    {
+      "path": "public/models/quaternius/suit.SOURCE.json",
+      "source": "/Users/vladimir/Documents/ChatGPT/Игра Курс месяца/public/models/quaternius/suit.SOURCE.json",
+      "sha256": "2e93174c08e61aa3dc1620c7e369100f957b538dae560e9852eb3ad93f8af82e"
+    }
+  ]
+}

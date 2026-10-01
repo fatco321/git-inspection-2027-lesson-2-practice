@@ -1,0 +1,9 @@
+{
+  "source": "https://quaternius.com/packs/ultimatemodularcharacters.html",
+  "license": "CC0-1.0",
+  "attributionRequired": false,
+  "sourceSha256": "e49f8ec0f8a7de72dd26b1c01e6413c9a87a9116eeee21f9364ccd36bc286335",
+  "sha256": "49e6ec652d0bf57a70b75fdcb3e84ba41afbe2214a83d4722d6327617dd643e7",
+  "modifications": "Blue workwear, white helmet, dark facial hair and skinned tool pouches; original skeleton and animations retained.",
+  "generator": "tools/assets/build_maintenance_worker.py"
+}

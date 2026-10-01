@@ -1,0 +1,266 @@
+html,
+body {
+  font-family: system-ui, sans-serif;
+  color: #f4f2e6;
+}
+button,
+select,
+input {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+.practice-hud {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  max-width: min(480px, calc(100vw - 64px));
+  padding: 12px 18px;
+  background: #172d3de8;
+  border: 1px solid #85b4b4;
+  border-radius: 9px;
+  font-size: 14px;
+  line-height: 1.55;
+  pointer-events: none;
+  white-space: pre-line;
+}
+.interaction-hint {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 24px;
+  border: 1px solid #d7ebda;
+  border-radius: 8px;
+  background: #cae0d6;
+  color: #18343c;
+  box-shadow: 0 4px 20px #0004;
+  max-width: 90vw;
+}
+.practice-panel {
+  position: fixed;
+  z-index: 10;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(680px, calc(100vw - 32px));
+  max-height: calc(100dvh - 48px);
+  overflow: auto;
+  box-sizing: border-box;
+  padding: 26px;
+  background: #193143f5;
+  border: 2px solid #91bfc0;
+  border-radius: 12px;
+  box-shadow: 0 18px 100px #0009;
+}
+.practice-panel h2 {
+  color: #afe0d0;
+  margin: 0 0 14px;
+  font-size: 24px;
+}
+.practice-panel p {
+  white-space: pre-line;
+  line-height: 1.6;
+}
+.practice-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+.practice-actions button {
+  padding: 10px 16px;
+  background: #c6dfd2;
+  color: #16343a;
+  border: 1px solid #b1d8cb;
+  border-radius: 6px;
+}
+.practice-actions .secondary {
+  background: transparent;
+  color: #dce9e7;
+}
+.practice-panel button:focus-visible,
+.interaction-hint:focus-visible {
+  outline: 3px solid #efcb85;
+  outline-offset: 3px;
+}
+.practice-body label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 16px 0;
+}
+.practice-body select,
+.practice-body input {
+  padding: 10px;
+  border-radius: 6px;
+  background: #edf1e7;
+  color: #193143;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.practice-note {
+  color: #f0ca8d;
+}
+.practice-photo {
+  width: 150px;
+  border-radius: 5px;
+  margin: 4px;
+  vertical-align: top;
+}
+.practice-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.practice-gallery figure {
+  margin: 0;
+  width: 155px;
+  font-size: 12px;
+}
+.camera-reticle {
+  position: fixed;
+  box-sizing: border-box;
+  border: 2px solid #e7eddb88;
+  pointer-events: none;
+  border-radius: 8px;
+  box-shadow: 0 0 0 100vmax #07152244;
+}
+[hidden] {
+  display: none !important;
+}
+@media (max-width: 600px) {
+  .practice-panel {
+    padding: 18px;
+  }
+  .practice-panel h2 {
+    font-size: 21px;
+  }
+  .practice-hud {
+    font-size: 12px;
+    top: 8px;
+    left: 8px;
+    padding: 8px 12px;
+  }
+  .practice-actions button {
+    flex: 1 1 auto;
+  }
+}
+
+.photo-toolbar {
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(650px, 90vw);
+  padding: 16px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background: #17303dec;
+  text-align: center;
+}
+.photo-toolbar p {
+  font-size: 14px;
+  margin: 0 0 12px;
+}
+.photo-toolbar button {
+  margin: 4px;
+  padding: 10px 18px;
+  border: 1px solid #b4d6c8;
+  border-radius: 5px;
+  background: #d1e3d4;
+  color: #193143;
+}
+
+.practice-guide-portrait {
+  float: left;
+  width: 100px;
+  border-radius: 6px;
+  margin: 0 18px 12px 0;
+  border: 1px solid #9ab7af;
+}
+.practice-actions {
+  clear: both;
+}
+
+.practice-clock {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin-bottom: 9px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #85b4b440;
+}
+.practice-day {
+  font-size: 17px;
+  color: #c5e4d5;
+}
+.practice-deadline {
+  font-size: 12px;
+  color: #d0ddd9;
+}
+.practice-deadline.urgent {
+  color: #f0c88e;
+}
+.practice-hud-details {
+  font-size: 12px;
+  color: #b7cdcf;
+  margin-top: 5px;
+}
+
+.saved-photo {
+  position: fixed;
+  z-index: 25;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(320px, 80vw);
+  padding: 12px;
+  box-sizing: border-box;
+  border: 1px solid #b1d8cb;
+  border-radius: 10px;
+  background: #193143;
+  color: #e7f1e9;
+  box-shadow: 0 12px 40px #0006;
+  pointer-events: none;
+  text-align: center;
+}
+.saved-photo strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.saved-photo img {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.plan-progress {
+  padding-left: 24px;
+  margin: 0 0 22px;
+}
+.plan-progress li {
+  padding: 8px 0;
+  border-bottom: 1px solid #85b4b433;
+}
+.plan-progress strong {
+  display: block;
+  font-weight: 500;
+}
+.plan-progress span {
+  display: block;
+  margin-top: 4px;
+  font-size: 13px;
+  color: #c0d3d8;
+}
+.plan-progress .done strong {
+  color: #afe0d0;
+}
+.practice-body summary {
+  cursor: pointer;
+  color: #afe0d0;
+  margin-top: 16px;
+}

@@ -1,0 +1,2 @@
+.work-progress-labels{position:fixed;inset:0;pointer-events:none;z-index:2;}
+.work-progress-label{position:absolute;transform:translate(-50%,-100%);padding:5px 10px;border:1px solid #a0c6c5;border-radius:7px;background:#193443eb;color:#e7f0e4;font:500 13px system-ui;white-space:nowrap;box-shadow:0 2px 8px #0003;}
