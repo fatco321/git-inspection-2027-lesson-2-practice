@@ -232,7 +232,7 @@ export class PracticeGame {
     this.camera.upperBetaLimit = 1.35;
     this.camera.inputs.removeByType("ArcRotateCameraKeyboardMoveInput");
     this.camera.panningSensibility = 0;
-    this.camera.attachControl(canvas, true);
+    this.camera.attachControl(canvas, false);
     const sky = new HemisphericLight("sky", Vector3.Up(), this.scene);
     sky.intensity = 0.65;
     sky.groundColor = Color3.FromHexString("#73888d");
@@ -288,7 +288,7 @@ export class PracticeGame {
           this.canvas.inert = true;
         } else if (!this.transitioning && !this.changingDay) {
           this.canvas.inert = false;
-          this.camera.attachControl(this.canvas, true);
+          this.camera.attachControl(this.canvas, false);
           this.canvas.focus();
         }
       },
@@ -584,7 +584,7 @@ export class PracticeGame {
     this.flow.ui.hud.hidden = false;
     this.transitioning = false;
     this.canvas.inert = false;
-    this.camera.attachControl(this.canvas, true);
+    this.camera.attachControl(this.canvas, false);
     this.walk?.setEnabled(
       this.flow.started && !this.flow.ui.open && !this.finished,
     );
@@ -782,7 +782,7 @@ export class PracticeGame {
     }
     this.walk?.setEnabled(!this.flow.ui.open && !this.finished);
     if (!this.flow.ui.open && !this.finished)
-      this.camera.attachControl(this.canvas, true);
+      this.camera.attachControl(this.canvas, false);
     this.canvas.focus();
   }
   dispose() {

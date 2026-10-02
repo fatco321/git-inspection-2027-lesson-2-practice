@@ -58,3 +58,6 @@ body {
     animation: none;
   }
 }
+
+/* Keep wheel scrolling inside the embedded game. */
+html, body, .dialogue-window, .practice-panel { overscroll-behavior: contain; }
