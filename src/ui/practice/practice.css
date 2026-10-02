@@ -264,3 +264,16 @@ button {
   color: #afe0d0;
   margin-top: 16px;
 }
+
+.practice-help {
+  pointer-events: auto;
+  margin-top: 10px;
+  padding: 9px 18px;
+  border: 1px solid #b1d8cb;
+  border-radius: 6px;
+  background: #c6dfd2;
+  color: #16343a;
+}
+.practice-help:disabled { opacity: .55; cursor: default; }
+.practice-help:focus-visible { outline: 3px solid #efcb85; outline-offset: 3px; }
+.practice-body h3 { color: #afe0d0; margin: 24px 0 8px; font-size: 18px; }

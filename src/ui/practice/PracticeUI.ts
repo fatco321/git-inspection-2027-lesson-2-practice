@@ -2,6 +2,7 @@ import "./practice.css";
 export type Choice = { text: string; action: () => void; secondary?: boolean };
 export class PracticeUI {
   readonly hud = document.createElement("div");
+  private readonly helpButton = document.createElement("button");
   private readonly hint = document.createElement("button");
   readonly panel = document.createElement("section");
   private readonly title = document.createElement("h2");
@@ -11,9 +12,13 @@ export class PracticeUI {
   constructor(
     private readonly toggle: (open: boolean) => void,
     interact: () => void,
+    help: () => void,
   ) {
     this.hud.className = "practice-hud";
     this.hud.hidden = true;
+    this.helpButton.textContent = "Помощь";
+    this.helpButton.className = "practice-help";
+    this.helpButton.onclick = help;
     this.hint.className = "interaction-hint";
     this.hint.hidden = true;
     this.hint.addEventListener("click", interact);
@@ -33,6 +38,7 @@ export class PracticeUI {
   setDayTransition(active: boolean) {
     this.panel.style.visibility = active ? "hidden" : "";
     this.panel.inert = active;
+    this.helpButton.disabled = active || this.open;
     if (active) this.hint.hidden = true;
   }
   updateHud(
@@ -65,7 +71,7 @@ export class PracticeUI {
     const info = document.createElement("div");
     info.className = "practice-hud-details";
     info.textContent = details;
-    this.hud.replaceChildren(clock, task, info);
+    this.hud.replaceChildren(clock, task, info, this.helpButton);
   }
   get open() {
     return !this.panel.hidden;
@@ -93,6 +99,7 @@ export class PracticeUI {
       this.actions.append(b);
     }
     this.panel.hidden = false;
+    this.helpButton.disabled = true;
     this.hint.hidden = true;
     this.toggle(true);
     this.panel.scrollTop = 0;
@@ -103,6 +110,7 @@ export class PracticeUI {
   }
   close() {
     this.panel.hidden = true;
+    this.helpButton.disabled = false;
     this.toggle(false);
   }
   prompt(text: string) {
